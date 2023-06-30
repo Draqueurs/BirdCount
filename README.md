@@ -10,7 +10,7 @@ The values, number of objects and result images obtained can be saved and loaded
 | _`app.py` on Windows 10 with dark mode_
 
 ## Installation
-Install the module with pip:
+Install dependencies with pip:
 ```
 pip install -r requirements.txt
 ```
