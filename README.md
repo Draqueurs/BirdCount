@@ -40,4 +40,13 @@ The square area is selected by holding down the left mouse button. When released
 The polygonal area is selected by adding points with the left mouse button and then validating the polygon with a right mouse button.
 The resulting image is used as a reference for further processing.
 
+### Attributes shape
+![](documentation_images/attributes_options.png)
+| _`app.py` Attributes tab expand_
+
+Features:
+  - Modification of the various values used for image processing and element counting..
+  - Save values and number of elements in a config.ini file.
+  - Save result images.
+
 
