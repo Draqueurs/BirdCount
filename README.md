@@ -14,3 +14,15 @@ Install dependencies with pip:
 ```
 pip install -r requirements.txt
 ```
+
+## Documentation
+Click on the plus or minus buttons to expand or hide tab options.
+
+### Project tab
+![](documentation_images/project_options.png)
+| _`app.py` project tab expand_
+
+Features:
+  - Add one or more images.
+  - Delete all images.
+  - Delete selected image.
