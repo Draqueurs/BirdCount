@@ -26,3 +26,15 @@ Features:
   - Add one or more images.
   - Delete all images.
   - Delete selected image.
+
+### Project tab
+![](documentation_images/project_options.png)
+| _`app.py` Region shape tab expand_
+
+Features:
+  - Selects and zooms in on a square in the image.
+  - Cuts the image, keeping only the inside of a polygon.
+
+The square area is selected by holding down the left mouse button. When released, the selected area is displayed.
+
+
