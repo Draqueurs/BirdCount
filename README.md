@@ -28,7 +28,7 @@ Features:
   - Delete selected image.
 
 ### Région shape
-![](documentation_images/project_options.png)
+![](documentation_images/region_shape_options.png)
 | _`app.py` Region shape tab expand_
 
 Features:
@@ -36,5 +36,8 @@ Features:
   - Cuts the image, keeping only the inside of a polygon.
 
 The square area is selected by holding down the left mouse button. When released, the selected area is displayed.
+
+The polygonal area is selected by adding points with the left mouse button and then validating the polygon with a right mouse button.
+The resulting image is used as a reference for further processing.
 
 
