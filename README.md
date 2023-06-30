@@ -10,9 +10,21 @@ The values, number of objects and result images obtained can be saved and loaded
 | _`app.py` on Windows 10 with dark mode_
 
 ## Installation
+
+### Local
 Install dependencies with pip:
 ```
 pip install -r requirements.txt
+```
+
+### Create executable
+Install pyinstaller with pip:
+```
+pip install pyinstaller
+```
+Then launch the following command:
+```
+pyinstaller --noconfirm --onefile --windowed --add-data "<path\to\customtkinter;customtkinter" ".\src\app.py"
 ```
 
 ## Documentation
