@@ -26,6 +26,7 @@ Then launch the following command:
 ```
 pyinstaller --noconfirm --onefile --windowed --add-data "<path\to\customtkinter;customtkinter" ".\src\app.py"
 ```
+Add the icons folder to the dist folder where the executable is located.
 
 ## Documentation
 Click on the plus or minus buttons to expand or hide tab options.
