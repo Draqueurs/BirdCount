@@ -7,6 +7,6 @@ BirdCount is a python application for counting objects by performing image analy
 The values, number of objects and result images obtained can be saved and loaded into the application.
 
 ![](documentation_images/main_app.png)
-| _`app.py` on Windows 10 with dark mode
+| _`app.py` on Windows 10 with dark mode_
 
 ## Installation
