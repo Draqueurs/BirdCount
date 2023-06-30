@@ -24,5 +24,7 @@ Click on the plus or minus buttons to expand or hide tab options.
 
 Features:
   - Add one or more images.
+    ![](documentation_images/project_options.png)
+    | _`app.py` Add one image_
   - Delete all images.
   - Delete selected image.
