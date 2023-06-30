@@ -27,7 +27,7 @@ Features:
   - Delete all images.
   - Delete selected image.
 
-### Project tab
+### Région shape
 ![](documentation_images/project_options.png)
 | _`app.py` Region shape tab expand_
 
