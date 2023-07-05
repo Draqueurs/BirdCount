@@ -73,6 +73,7 @@ class MainFrame(customtkinter.CTkFrame):
 
         # Associer les fonctions aux événements de la souris
         self.label._label.bind("<Button-1>", self.mouse_down_polygon)
+        self.label._label.bind("<Button-2>", self.enter_down)
         self.label._label.bind("<Button-3>", self.enter_down)
 
     def mouse_down_polygon(self, event):
@@ -93,5 +94,6 @@ class MainFrame(customtkinter.CTkFrame):
         # Associer les fonctions aux événements de la souris
         self.label._label.unbind("<Button-1>")
         self.label._label.unbind("<ButtonRelease-1>")
+        self.label._label.unbind("<Button-2>")
         self.label._label.unbind("<Button-3>")
 
