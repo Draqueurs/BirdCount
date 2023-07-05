@@ -49,6 +49,13 @@ class ImageAnalyzer:
     def set_width_height(self):
         self.height, self.width, _ = self.image2display.shape
 
+    def draw_rectangle(self, start_point, end_point):
+        self.image2display = self.image_process.copy()
+        self.image2display = cv2.rectangle(self.image2display, start_point, end_point, (0, 0, 255), 2)
+
+    def draw_line(self, start_point, end_point):
+        self.image2display = cv2.line(self.image2display, start_point, end_point, (0, 0, 255), 2)
+
     def hsv(self, min_hue, max_hue,
             min_saturation, max_saturation,
             min_value, max_value,

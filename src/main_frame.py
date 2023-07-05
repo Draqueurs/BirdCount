@@ -45,12 +45,24 @@ class MainFrame(customtkinter.CTkFrame):
 
         # Associer les fonctions aux événements de la souris
         self.label._label.bind("<Button-1>", self.mouse_down)
+        self.label._label.bind("<B1-Motion>", self.mouse_hold)
         self.label._label.bind("<ButtonRelease-1>", self.mouse_up)
 
     # Fonction pour gérer l'événement de clic de souris
     def mouse_down(self, event):
         self.X1 = event.x
         self.Y1 = event.y
+
+    # Fonction pour gérer l'événement de maintient de souris
+    def mouse_hold(self, event):
+        self.X2 = event.x
+        self.Y2 = event.y
+        x1 = int((self.image_analyzer.get_width() * self.X1) / self.size[0]) 
+        y1 = int((self.image_analyzer.get_height() * self.Y1) / self.size[1])
+        x2 = int((self.image_analyzer.get_width() * self.X2) / self.size[0]) 
+        y2 = int((self.image_analyzer.get_height() * self.Y2) / self.size[1])
+        self.image_analyzer.draw_rectangle((x1, y1), (x2, y2))
+        self.update_label()
 
     # Fonction pour gérer l'événement de relâchement de souris
     def mouse_up(self, event):
@@ -78,6 +90,13 @@ class MainFrame(customtkinter.CTkFrame):
 
     def mouse_down_polygon(self, event):
         self.points.append((event.x,event.y))
+        if len(self.points) > 1:
+            x1 = int((self.image_analyzer.get_width() * self.points[-2][0]) / self.size[0]) 
+            y1 = int((self.image_analyzer.get_height() * self.points[-2][1]) / self.size[1])
+            x2 = int((self.image_analyzer.get_width() * self.points[-1][0]) / self.size[0]) 
+            y2 = int((self.image_analyzer.get_height() * self.points[-1][1]) / self.size[1])
+            self.image_analyzer.draw_line((x1, y1), (x2, y2))
+            self.update_label()
 
     def enter_down(self, event):
         # Dessiner le rectangle
@@ -93,6 +112,7 @@ class MainFrame(customtkinter.CTkFrame):
     def unbind_all(self):
         # Associer les fonctions aux événements de la souris
         self.label._label.unbind("<Button-1>")
+        self.label._label.unbind("<B1-Motion>")
         self.label._label.unbind("<ButtonRelease-1>")
         self.label._label.unbind("<Button-2>")
         self.label._label.unbind("<Button-3>")
